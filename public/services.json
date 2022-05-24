@@ -28,9 +28,9 @@
     },
     {
         "_id": 4,
-        "name": "Milton",
+        "name": "Milton ph1",
         "price": "180",
-        "orderQuantity": "50",
+        "orderQuantity": "100",
         "availableQuantity": "9000",
         "description": "Milton S-653-4 1/2-Inch FNPT x 3/8-Inch MNPT Hose  with Washer M6X12 Fitting Adapter, Box of 50.",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6COeQKkqL2nT0CgK4P8eUZaVxDZ8MoYz81w&usqp=CAU"
@@ -39,14 +39,14 @@
         "_id": 5,
         "name": "Head Cap",
         "price": "100",
-        "orderQuantity": "50",
+        "orderQuantity": "100",
         "availableQuantity": "4000",
         "description": "1/4-20 X 5/8 Socket Head Cap Screw-ASME B18.3 302HQ S/S, DFARS 5/8 THD, Made in USA(BAGGED 50 PCS PER)",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp74b1egQlNm7LB4aR_UWv7CSF0R72Un6xtGkZcd-x_lf39WkbN1J3_DR0udbQ6xq1Log&usqp=CAU"
     },
     {
         "_id": 6,
-        "name": "HHIP",
+        "name": "HHIP hp32",
         "price": "300",
         "orderQuantity": "50",
         "availableQuantity": "6000",
@@ -79,32 +79,5 @@
         "availableQuantity": "7000",
         "description": "Hitachi 996577 Bolt with Washer M6X12 (Black) Replacement Part Bolt with Washer M6X12 (Black) Replacement Part",
         "img": "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Timing%20Chain%20Kit.png"
-    },
-    {
-        "_id": 10,
-        "name": "HHIP",
-        "price": "300",
-        "orderQuantity": "50",
-        "availableQuantity": "6000",
-        "description": "HHIP 5001-4006 High Speed Steel Production Grade Jobber Bolt with Washer M6X12 (Black) Replacement Part",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRULqil84THzXdKzD-TvkToa2bW8jPb3zlvpg8W1yFrim9kERVFBqi5Es-jLLiyMHrvAwQ&usqp=CAU"
-    },
-    {
-        "_id": 11,
-        "name": "Lock Miter",
-        "price": "300",
-        "orderQuantity": "100",
-        "availableQuantity": "5000",
-        "description": "TOOLDO 45 Degree Lock Miter Router bit 1/2 Shank,Lock Miter Woodworking Tools Set (for 1/2 3/4 1Board)",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQADLFRnIMGP6NTa7PBprpnOn7BQ9_ZS94nLehIaSmreRRoxjTLRJnVv-jqK-PStDgxuWI&usqp=CAU"
-    },
-    {
-        "_id": 12,
-        "name": "Bosch 84428M",
-        "price": "300",
-        "orderQuantity": "70",
-        "availableQuantity": "000",
-        "description": "Bosch 84428M 3/8 In. x 9/16 In. Carbide Tipped Cove Bit.  118 Degree, 3/32 Size, 2-1/4 Length",
-        "img": "https://images-eu.ssl-images-amazon.com/images/I/612MmDBaOZL._AC._SR360,460.jpg"
     }
 ]
