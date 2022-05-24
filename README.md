@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# [Private Tutor](https://private-tutor-c96e1.web.app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Featureas
+- Registration Form
+- Login Form
+- Home Banner
+- Modern Header
+- Servie Section
+- Social Login
+- Contact form
+- Summary
+- Require Auth
+
+## Technology Used
+- React JS
+- Tailwindcss
+- Heroku
+- DaisyUI
+- MongoDb
+- Fireabase
+- React firebase hook
+- HTML
+- CSS
+- JavaScrip
 
 ## Available Scripts
 
