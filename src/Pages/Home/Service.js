@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 
-const Service = ({ service, setItems }) => {
+const Service = ({ service }) => {
   const { _id, name, img, description, price, orderQuantity , availableQuantity} = service;
 
   const navigateToServiceDetail = id =>{

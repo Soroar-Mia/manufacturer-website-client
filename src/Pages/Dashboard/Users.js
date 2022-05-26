@@ -18,7 +18,7 @@ const Users = () => {
 
     return (
         <div>
-            <h2 className="text-2xl">All Users : {users.length}</h2>
+            <h2 className="text-2xl text-indigo-800">All Users</h2>
             <div class="overflow-x-auto">
   <table class="table w-full">
 

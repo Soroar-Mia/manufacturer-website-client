@@ -2,20 +2,18 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div class="hero min-h-screen bg-base-200">
+    <div class="hero min-h-screen bg-base bg-purple-100">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <img
           src="https://myfitment.com/wp-content/uploads/2020/12/What-Are-Aftermarket-Car-Parts-1024x584.jpg"
           class="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 class="text-5xl font-bold">Box Office News!</h1>
+          <h1 class="text-5xl font-bold text-purple-800">BEST CAR PARTS</h1>
           <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          Always up for a challenge, I have a deep desire to excel and <br />continuously improve in our work.
           </p>
-          <button class="btn btn-primary font-bold">Get Started</button>
+          <button class="btn btn-primary font-bold">SEE NOW</button>
         </div>
       </div>
     </div>

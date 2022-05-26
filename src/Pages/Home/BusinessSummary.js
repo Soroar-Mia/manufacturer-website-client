@@ -26,10 +26,9 @@ const BusinessSummary = () => {
         }
     ];
     return (
-        <div className='my-28'>
+        <div className='my-5 bg-violet-200'>
             <div className='text-center'>
-                <h3 className='text-primary  text-xl font-bold uppercase'>Our Services</h3>
-                <h2 className='text-4xl'>Services We Provide</h2>
+                <h2 className='text-4xl py-10 text-purple-800'>Some summary of our Business</h2>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {

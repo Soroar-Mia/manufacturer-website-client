@@ -17,10 +17,11 @@ import MyReview from './Pages/Dashboard/MyReview';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import Users from './Pages/Dashboard/Users';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 function App() {
   return (
-    <div >
+    <div className='bg-violet-200' >
     <Navbar></Navbar>
     <Routes>
         <Route path="/" element={<Home />} />
@@ -36,6 +37,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>        
           <Route path="users" element={<Users></Users>}></Route>        
+          <Route path="product" element={<AddProduct></AddProduct>}></Route>        
       </Route>
         <Route path="/Login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

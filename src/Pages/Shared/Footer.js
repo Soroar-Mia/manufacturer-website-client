@@ -3,10 +3,11 @@ import footer from '../../assets/images/footer.png';
 
 const Footer = () => {
     return (
-        <footer style={{
+<div className='bg-slate-600  text-white'>
+<footer style={{
             background: `url(${footer})`,
             backgroundSize: 'cover'
-        }} className="p-10 px-12">
+        }} className="p-10 px-12 ">
             <div className='footer'>
                 <div>
                     <span className="footer-title">Services</span>
@@ -33,6 +34,7 @@ const Footer = () => {
                 <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
             </div>
         </footer>
+</div>
     );
 };
 

@@ -5,7 +5,7 @@ import Service from './Service';
 const Services = () => {
 
     const [services, setServices] = useState([]);
-    const [items, setItems]= useState(null);
+
 
     useEffect( ()=>{
         fetch('http://localhost:5000/service')
@@ -15,13 +15,12 @@ const Services = () => {
     
     return (
         <div >
-            <h2 className='text-xl text-secondary text-center my-12'> Our Parts</h2>
+            <h2 className='text-4xl text-center my-12'> Our Parts</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {
                 services.map(service => <Service
                     key={service._id}
                     service={service}
-                    setItems={setItems}
                 >
                 </Service>)
             }
