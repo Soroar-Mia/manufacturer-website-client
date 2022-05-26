@@ -9,7 +9,7 @@ const AddProduct = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("update done");
+    console.log(data);
   };
   return (
     <div>
@@ -23,20 +23,7 @@ const AddProduct = () => {
             type="text"
             placeholder="Parts Name"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
         </div>
 
 
@@ -50,20 +37,7 @@ const AddProduct = () => {
             type="text"
             placeholder="price"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
         </div>
 
 
@@ -77,20 +51,7 @@ const AddProduct = () => {
             type="text"
             placeholder="available Quantity"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
         </div>
 
 
@@ -103,20 +64,8 @@ const AddProduct = () => {
             type="text"
             placeholder="description"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
+
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
         </div>
 
 
@@ -129,20 +78,8 @@ const AddProduct = () => {
             type="text"
             placeholder="Order Quantity"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Order Quantity is Required",
-              },
-            })}
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
+
         </div>
 
 
@@ -155,20 +92,8 @@ const AddProduct = () => {
             type="File"
             placeholder="Photo"
             className="input input-bordered w-full max-w-xs"
-            {...register("name", {
-              required: {
-                value: true,
-                message: "Name is Required",
-              },
-            })}
           />
-          <label className="label">
-            {errors.name?.type === "required" && (
-              <span className="label-text-alt text-red-500">
-                {errors.name.message}
-              </span>
-            )}
-          </label>
+
         </div>
 
 

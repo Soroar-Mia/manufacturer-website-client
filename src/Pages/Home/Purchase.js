@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../firebase.init";
-import PurchaseVew from "./PurchaseVew";
 
 const Purchase = () => {
   const [user, loading, error] = useAuthState(auth);
   const { id } = useParams();
-  console.log(id);
   const [service, setService] = useState({});
 
   useEffect(() => {
@@ -18,7 +16,7 @@ const Purchase = () => {
       });
   }, [id]);
 
-  console.log(service);
+ 
   return (
     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5">
       <div className="grid grid-cols-1 gap-3 justify-items-center">
