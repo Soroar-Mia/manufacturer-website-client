@@ -19,28 +19,22 @@ const Navbar = () => {
             <li>
               <Link to="/Parts">parts</Link>
             </li>
-            <li>
-              <Link to="/purchase">Purchase</Link>
-            </li>
-            <li>
-              <Link to="/Business Summary">Business Summary</Link>
-            </li>
+            {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+            }
             <li>
               <Link to="/blogs">Blogs</Link>
             </li>
             <li>
-              <Link to="/Contact">Contact</Link>
+              <Link to="/myPortfolio">My Portfolio</Link>
             </li>
-            {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
-            }
             <li>
             {user ? <button className="btn btn-ghost"  onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}
             </li>
 </>
 
   return (
-    <div class="navbar bg-base-100">
+    <div class="navbar primary-focus">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">

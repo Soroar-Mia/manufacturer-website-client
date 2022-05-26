@@ -16,6 +16,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyReview from './Pages/Dashboard/MyReview';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import Users from './Pages/Dashboard/Users';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Parts" element={<Parts />} />
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path="/purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>} />
         <Route path="/dashboard" element={
         <RequireAuth>
