@@ -6,7 +6,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`http://localhost:5000/get-orders/${user?.email}`)
+    fetch(`https://mighty-basin-34792.herokuapp.com/get-orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);

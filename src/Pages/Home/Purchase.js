@@ -10,7 +10,7 @@ const Purchase = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service-single/${id}`)
+    fetch(`https://mighty-basin-34792.herokuapp.com/service-single/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);
@@ -26,7 +26,7 @@ const Purchase = () => {
       quantity: event.target.quantity.value,
     }
     console.log(booking);
-    fetch("http://localhost:5000/post-service", {
+    fetch("https://mighty-basin-34792.herokuapp.com/post-service", {
       method: "POST",
       headers: {
         "content-type": "application/json",

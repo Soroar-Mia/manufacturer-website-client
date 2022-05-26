@@ -6,7 +6,7 @@ const Parts = () => {
 
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://mighty-basin-34792.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setServices(data.slice(0, 6)));
     }, [])
