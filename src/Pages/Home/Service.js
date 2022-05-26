@@ -1,7 +1,13 @@
 import React from "react";
+import { Link, Navigate } from "react-router-dom";
 
 const Service = ({ service, setItems }) => {
   const { _id, name, img, description, price, orderQuantity , availableQuantity} = service;
+
+  const navigateToServiceDetail = id =>{
+    Navigate(`/service/${_id}`);
+}
+
   return (
     <div class="card w-96 bg-base-100 shadow-xl">
       <figure class="px-10 pt-10">
@@ -19,7 +25,7 @@ const Service = ({ service, setItems }) => {
         <p>Available Quantity{availableQuantity}</p>
         <p><small>{description}</small></p>
         <div class="card-actions">
-          <button onClick={() => setItems(service)} class="btn btn-primary">Buy Now</button>
+          <Link to={`/purchase/${_id}`} class="btn btn-primary">Buy Now</Link>
         </div>
       </div>
     </div>
