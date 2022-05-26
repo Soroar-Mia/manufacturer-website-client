@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const Purchase = () => {
@@ -15,6 +16,31 @@ const Purchase = () => {
         setService(data);
       });
   }, [id]);
+
+  const handleBooking = (event) => {
+    event.preventDefault();
+    const booking = {
+      productName: event.target.name.value,
+      email: event.target.email.value,
+      phone: event.target.phone.value,
+      quantity: event.target.quantity.value,
+    }
+    console.log(booking);
+    fetch("http://localhost:5000/post-service", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data?.insertedId) {
+          toast.success('Service added!')
+        }
+      }); 
+  };
 
  
   return (
@@ -42,13 +68,13 @@ const Purchase = () => {
         </div>
       </div>
       <div>
-      <form className="grid grid-cols-1 gap-3 justify-items-center mt-5">
+      <form onSubmit={handleBooking} className="grid grid-cols-1 gap-3 justify-items-center mt-5">
       <p className="text-4xl text-indigo-800 py-10">PURCHASE</p>
           <input
             type="text"
             name="name"
             disabled
-            value={user?.displayName || ""}
+            value={service?.name || ""}
             className="input input-bordered w-full max-w-xs"
           />
           <input
@@ -66,7 +92,7 @@ const Purchase = () => {
           />
           <input
             type="text"
-            name="Quantity"
+            name="quantity"
             placeholder="Quantity"
             className="input input-bordered w-full max-w-xs"
           />

@@ -1,7 +1,13 @@
 import React from 'react';
+import { Link, Navigate } from 'react-router-dom';
 
 const Part = ({ service }) => {
     const { _id, name, img, description, price, orderQuantity , availableQuantity} = service;
+
+    const navigateToServiceDetail = id =>{
+      Navigate(`/service/${_id}`);
+    }
+
     return (
       <div class="card w-96 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
@@ -18,7 +24,7 @@ const Part = ({ service }) => {
           <p>Available Quantity{availableQuantity}</p>
           <p><small>{description}</small></p>
           <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
+          <Link to={`/purchase/${_id}`} class="btn btn-primary">Buy Now</Link>
           </div>
         </div>
       </div>

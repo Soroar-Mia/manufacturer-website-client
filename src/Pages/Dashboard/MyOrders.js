@@ -1,71 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const MyOrders = () => {
-    return (
-        <div>
-            <h2 className='text-indigo-800 text-2xl'>my order</h2>
-            <div class="overflow-x-auto">
-  <table class="table w-full">
-
-    <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Parts Name</th>
-        <th>order Quantity</th>
-        <th>Button</th>
-      </tr>
-    </thead>
-    <tbody>
- 
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>shjdl@gmail.com</td>
-        <td>Quality Control Specialist</td>
-        <td>150</td>
-        <td><button class="btn btn-secondary">Cancel</button></td>
-      </tr>
-
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Asjdl@gmail.com</td>
-        <td>Desktop Support Technician</td>
-        <td>100</td>
-        <td><button class="btn btn-secondary">Cancel</button></td>
-      </tr>
-
-      <tr>
-        <th>3</th>
-        <td>Aice Swyre</td>
-        <td>hjdl@gmail.com</td>
-        <td>Tax Accountant</td>
-        <td>200</td>
-        <td><button class="btn btn-secondary">Cancel</button></td>
-      </tr>
-      <tr>
-        <th>4</th>
-        <td>Furjf Swyre</td>
-        <td>ddjdl@gmail.com</td>
-        <td>Tax Accountant</td>
-        <td>150</td>
-        <td><button class="btn btn-secondary">Cancel</button></td>
-      </tr>
-      <tr>
-        <th>5</th>
-        <td>Dfkfg Swyre</td>
-        <td>shjdl@gmail.com</td>
-        <td>Tax Accountant</td>
-        <td>300</td>
-        <td><button class="btn btn-secondary">Cancel</button></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-        </div>
-    );
+  const [orders, setOrders] = useState([]);
+  const [user] = useAuthState(auth);
+  useEffect(() => {
+    fetch(`http://localhost:5000/get-orders/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setOrders(data);
+      });
+  }, [user]);
+  console.log(orders);
+  return (
+    <div>
+      <h2 className="text-indigo-800 text-2xl">my order</h2>
+      <div class="overflow-x-auto">
+        <table class="table w-full">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Product Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Order Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {orders
+              .slice(0, 6)
+              .map(({ productName, email, quantity, phone }, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{productName}</td>
+                  <td>{email}</td>
+                  <td>{phone}</td>
+                  <td>{quantity}</td>
+                  <td>
+                    <button class="btn btn-secondary">Cancel</button>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default MyOrders;

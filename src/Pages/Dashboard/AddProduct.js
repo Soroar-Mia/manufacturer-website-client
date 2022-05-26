@@ -12,8 +12,8 @@ const AddProduct = () => {
     console.log(data);
   };
   return (
-    <div>
-      <h2 className="text-2xl text-indigo-800">Product</h2>
+    <div className="grid grid-cols-1 gap-3 justify-items-center py-10 mt-2">
+      <h2 className="text-4xl text-indigo-800">Add A PARTS</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">
@@ -99,7 +99,7 @@ const AddProduct = () => {
 
 
         <input
-          className="btn w-full max-w-xs text-white"
+          className="btn mt-5 w-full max-w-xs text-white"
           type="submit"
           value="ADD"
         />
